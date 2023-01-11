@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--favicon-->
+	<link rel="icon" href="assets/images/logo-tma.png" type="image/png" />
+	<!--plugins-->
+	<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+	<link href="assets/plugins/fancy-file-uploader/fancy_fileupload.css" rel="stylesheet" />
+	<link href="assets/plugins/Drag-And-Drop/dist/imageuploadify.min.css" rel="stylesheet" />
+	<link href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+	<!-- loader-->
+	<link href="assets/css/pace.min.css" rel="stylesheet" />
+	<script src="assets/js/pace.min.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-extended.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link href="assets/css/app.css" rel="stylesheet">
+	<link href="assets/css/icons.css" rel="stylesheet">
+
+	<title>GFCA - Supplier</title>
+</head>
+
+<body class="bg-theme bg-theme1">
+	<!--wrapper-->
+	<div class="wrapper">
+		<!--sidebar wrapper -->
+		<div class="sidebar-wrapper" data-simplebar="true">
+			<div class="sidebar-header">
+				<div>
+					<img src="assets/images/logo-tma.png" class="logo-icon" alt="logo icon">
+				</div>
+				<div>
+					<h4 class="logo-text">GFCA</h4>
+				</div>
+				<div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
+				</div>
+			</div>
+			<!--navigation-->
+			<ul class="metismenu" id="menu">
+				<li>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class='bx bx-home-circle'></i>
+						</div>
+						<div class="menu-title">Dashboard</div>
+					</a>
+					<ul>
+						<li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>Total IDFs</a>
+						</li>
+						<!-- <li> <a href="fob.html"><i class="bx bx-right-arrow-alt"></i>Total FOB</a>
+						</li> -->
+						<!-- <li> <a href="cif.html"><i class="bx bx-right-arrow-alt"></i>Total CIF</a>
+						</li>
+						<li> <a href="tax-payable.html"><i class="bx bx-right-arrow-alt"></i>Total Tax
+								Payable</a>
+						</li>
+						<li> <a href="tax-paid.html"><i class="bx bx-right-arrow-alt"></i>Total Tax Paid</a>
+						</li>
+						<li> <a href="exemption.html"><i class="bx bx-right-arrow-alt"></i>Total Exemptions</a>
+						</li> -->
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class="bx bx-category"></i>
+						</div>
+						<div class="menu-title">Set up</div>
+					</a>
+					<ul>
+						<li> <a href="form-file-upload.html"><i class="bx bx-right-arrow-alt"></i>Import Data</a>
+						</li>
+						<li> <a href="create-user.html"><i class="bx bx-right-arrow-alt"></i>Create User</a>
+						</li>
+						<li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>Renew User Account</a>
+						</li>
+					</ul>
+				</li>
+				<li class="menu-label">Elements Management</li>
+				<li>
+					<a class="has-arrow" href="javascript:;">
+						<div class="parent-icon"><i class="bx bx-folder"></i>
+						</div>
+						<div class="menu-title">Reports</div>
+					</a>
+					<ul>
+						<li>
+							<a class="has-arrow" href="javascript:;">
+								<div class="parent-icon"><i class="bx bx-right-arrow-alt"></i>
+								</div>
+								<div class="menu-title">Statistical Reports</div>
+							</a>
+							<ul>
+								<li> <a href="report.html" target="_blank"><i class="bx bx-right-arrow-alt"></i>Banks
+										IDFs</a>
+								</li>
+								<li> <a href="report1.html" target="_blank"><i class="bx bx-right-arrow-alt"></i>BDC
+										IDFs</a>
+								</li>
+								<li> <a href="report2.html" target="_blank"><i class="bx bx-right-arrow-alt"></i>Other
+										IDFs</a>
+								</li>
+								<li> <a href="report11.html" target="_blank"><i
+											class="bx bx-right-arrow-alt"></i>Countries Track</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a class="has-arrow" href="javascript:;">
+								<div class="parent-icon"><i class="bx bx-right-arrow-alt"></i>
+								</div>
+								<div class="menu-title">AI Query</div>
+							</a>
+							<ul>
+								<li> <a href="report3.html" title="Undeclared IDF" target="_blank"><i
+											class="bx bx-right-arrow-alt"></i>Undeclared IDF</a>
+								</li>
+								<li> <a href="report10.html" target="_blank"><i
+											class="bx bx-right-arrow-alt"></i>Expired Bonded Warehouse</a>
+								</li>
+								<li> <a href="report4.html" target="_blank"><i
+											class="bx bx-right-arrow-alt"></i>Understated IDF</a>
+								</li>
+								<li> <a href="report5.html" target="_blank"><i class="bx bx-right-arrow-alt"></i>BOE
+										without Transfers</a>
+								</li>
+								<li> <a href="report6.html" target="_blank"><i
+											class="bx bx-right-arrow-alt"></i>Non-Declarant</a>
+								</li>
+								<li> <a href="report7.html" target="_blank"><i class="bx bx-right-arrow-alt"></i>BDC IDF
+										Vs Product CIF Declared</a>
+								</li>
+								<li> <a href="report12.html" target="_blank"><i
+											class="bx bx-right-arrow-alt"></i>Non-Repatriation</a>
+								</li>
+								<!-- <li> <a href="report8.html" target="_blank"><i
+									class="bx bx-right-arrow-alt"></i>Unpaid-For Gated-Out Container</a>
+								</li>
+								<li> <a href="report9.html" target="_blank"><i
+											class="bx bx-right-arrow-alt"></i>Undeclared Cargo Reports</a>
+								</li> -->
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<!-- <li>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class='bx bx-layer-plus'></i>
+						</div>
+						<div class="menu-title">Airport Module</div>
+					</a>
+					<ul>
+						<li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>Courier Services</a>
+						</li>
+						<li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>Cargos</a>
+						</li>
+					</ul>
+				</li> -->
+				<li>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class='bx bx-message-square-edit'></i>
+						</div>
+						<div class="menu-title">Settings</div>
+					</a>
+					<ul>
+						<li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>IDF Perfection
+								Maturity Period</a>
+						</li>
+						<li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>Update HS
+								Code</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="index.html">
+						<div class="parent-icon"><i class='bx bx-donate-blood'></i>
+						</div>
+						<div class="menu-title">Banks</div>
+					</a>
+				</li>
+				<li>
+					<a href="importer_create.html">
+						<div class="parent-icon"><i class='bx bx-user-circle'></i>
+						</div>
+						<div class="menu-title">Importers</div>
+					</a>
+				</li>
+				<li>
+					<a href="exporter_create.html">
+						<div class="parent-icon"><i class='bx bx-user-circle'></i>
+						</div>
+						<div class="menu-title">Exporters</div>
+					</a>
+				</li>
+				<li>
+					<a href="supplier_create.html">
+						<div class="parent-icon"><i class='bx bx-user-circle'></i>
+						</div>
+						<div class="menu-title">Suppliers</div>
+					</a>
+				</li>
+			</ul>
+			<!--end navigation-->
+		</div>
+		<!--end sidebar wrapper -->
+		<!--start header -->
+		<header>
+			<div class="topbar d-flex align-items-center">
+				<nav class="navbar navbar-expand">
+					<div class="mobile-toggle-menu"><i class='bx bx-menu'></i>
+					</div>
+					<div class="search-bar flex-grow-1">
+						<div class="position-relative search-bar-box">
+							<input type="text" class="form-control search-control" placeholder="Type to search...">
+							<span class="position-absolute top-50 search-show translate-middle-y"><i
+									class='bx bx-search'></i></span>
+							<span class="position-absolute top-50 search-close translate-middle-y"><i
+									class='bx bx-x'></i></span>
+						</div>
+					</div>
+					<div class="top-menu ms-auto">
+						<ul class="navbar-nav align-items-center">
+							<li class="nav-item mobile-search-icon">
+								<a class="nav-link" href="#"> <i class='bx bx-search'></i>
+								</a>
+							</li>
+							<li class="nav-item dropdown dropdown-large">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
+									role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span
+										class="alert-count">3</span>
+									<i class='bx bx-bell'></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<a href="javascript:;">
+										<div class="msg-header">
+											<p class="msg-header-title">Notifications</p>
+											<p class="msg-header-clear ms-auto">Marks all as read</p>
+										</div>
+									</a>
+									<div class="header-notifications-list">
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify"><i class="bx bx-group"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Renew Account<span
+															class="msg-time float-end">14 Sec
+															ago</span></h6>
+													<p class="msg-info">Regina account has expired</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify"><i class="bx bx-file"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">24 PDF File<span class="msg-time float-end">19
+															min
+															ago</span></h6>
+													<p class="msg-info">New reports generated</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify"><i class="bx bx-send"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New User Added <span
+															class="msg-time float-end">2 hrs ago</span></h6>
+													<p class="msg-info">Ali created a new user</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:;">
+										<div class="text-center msg-footer">View All Notifications</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="user-box dropdown">
+						<a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#"
+							role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="assets/images/avatars/aku.jpg" class="user-img" alt="user avatar">
+							<div class="user-info ps-3">
+								<p class="user-name mb-0">Regina Aku</p>
+								<p class="designattion mb-0">Super admin</p>
+							</div>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li><a class="dropdown-item" href="javascript:;"><i
+										class="bx bx-user"></i><span>Profile</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i
+										class="bx bx-cog"></i><span>Settings</span></a>
+							</li>
+							<li>
+								<div class="dropdown-divider mb-0"></div>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i
+										class='bx bx-log-out-circle'></i><span>Logout</span></a>
+							</li>
+						</ul>
+					</div>
+					<div class="top-menu ms-auto">
+						<ul class="navbar-nav align-items-center">
+							<li class="nav-item dropdown dropdown-large">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
+									role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									<i class='bx bx-bell'></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<a href="javascript:;">
+										<div class="msg-header">
+										</div>
+									</a>
+									<div class="header-notifications-list">
+
+									</div>
+
+								</div>
+							</li>
+
+							<li class="nav-item dropdown dropdown-large">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
+									role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									<i class='bx bx-comment'></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<div class="header-message-list">
+
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<!--end header -->
+		<!--start page wrapper -->
+		<div class="page-wrapper">
+			<div class="page-content">
+				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+					<div class="breadcrumb-title pe-3">Set up</div>
+					<div class="ps-3">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb mb-0 p-0">
+								<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">Create Supplier</li>
+							</ol>
+						</nav>
+					</div>
+					<div class="ms-auto">
+						<div class="btn-group">
+							<button type="button" class="btn btn-light">Settings</button>
+							<button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split"
+								data-bs-toggle="dropdown"> <span class="visually-hidden">Toggle Dropdown</span>
+							</button>
+							<div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end"> <a
+									class="dropdown-item" href="javascript:;">Action</a>
+								<a class="dropdown-item" href="javascript:;">Another action</a>
+								<a class="dropdown-item" href="javascript:;">Something else here</a>
+								<div class="dropdown-divider"></div> <a class="dropdown-item"
+									href="javascript:;">Separated link</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="d-flex align-items-center justify-content-center my-5 my-lg-0">
+					<div class="container">
+						<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
+							<div class="col mx-auto">
+								<div class="card">
+									<div class="card-body">
+										<div class="border p-4 rounded">
+											<div class="form-body">
+												<form class="row g-3">
+													<div class="col-sm-6">
+														<label for="inputFirstName" class="form-label">Full
+															Name</label>
+														<input type="text" class="form-control" id="inputFirstName"
+															placeholder="Moh Ali">
+													</div>
+													<div class="col-sm-6">
+														<label for="inputLastName" class="form-label">Email</label>
+														<input type="email" class="form-control" id="inputLastName"
+															placeholder="user@gmail.com">
+													</div>
+													<div class="col-sm-6">
+														<label for="image" class="form-label">Choose a pic </label>
+														<input type="file" name="image" id="image"
+															accept="image/jpg,image/jpeg" class="form-control">
+													</div>
+													<div class="col-sm-6">
+														<label for="inputFirstName" class="form-label">Contact
+														</label>
+														<input type="number" class="form-control" id="inputFirstName"
+															placeholder="+233 245 05 04">
+													</div>
+													<div class="col-sm-6">
+														<label for="inputLastName" class="form-label">Address</label>
+														<input type="text" class="form-control" id="inputLastName"
+															placeholder="Infantury Road 5 LKS129">
+													</div>
+													<div class="col-sm-6">
+														<label for="inputLastName" class="form-label">Bank Name</label>
+														<input type="text" class="form-control" id="inputLastName"
+															placeholder="Bank of London">
+													</div>
+													<div class="col-sm-6">
+														<label for="inputLastName" class="form-label">Account Number</label>
+														<input type="text" class="form-control" id="inputLastName"
+															placeholder="5556667778129">
+													</div>
+													<div class="col-sm-6">
+														<label for="inputLastName" class="form-label">Country</label>
+														<input type="password" class="form-control" id="inputLastName"
+															placeholder="France">
+													</div>
+													<div class="col-12 text-center">
+														<button class="btn btn-light" type="submit" id="submit"
+															data-type="add"><i class='bx bx-user'></i>Create</button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--end row-->
+						<!--end row-->
+						<h6 class="mb-0 text-uppercase">LIST OF SUPPLIERS</h6>
+						<hr />
+						<div class="card">
+							<div class="card-body">
+								<div class="table-responsive">
+									<table id="example" class="table table-striped table-bordered" style="width:100%">
+										<thead>
+											<tr>
+												<th>Full Name</th>
+												<th>Contact</th>
+												<th>Email</th>
+												<th>Adress</th>
+												<th>Action</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Regina Aku</td>
+												<td>+44 222 4432 111</td>
+												<td>aku@uk.com</td>
+												<td>United Kingdom</td>
+												<td>
+													<div class="row row-cols-auto g-3">
+														<div class="col">
+															<button type="button" class="btn btn-light"
+																data-bs-toggle="modal"
+																data-bs-target="#exampleSuccessModal">View</i>
+															</button>
+															<!-- Modal -->
+															<div class="modal fade" id="exampleSuccessModal"
+																tabindex="-1" aria-hidden="true">
+																<div
+																	class="modal-dialog modal-lg modal-dialog-centered">
+																	<div class="modal-content bg-success">
+																		<div class="modal-header">
+																			<h5 class="modal-title text-white">Regina Aku</h5>
+																			<button type="button" class="btn-close"
+																				data-bs-dismiss="modal"
+																				aria-label="Close"></button>
+																		</div>
+																		<div class="row">
+																			<div class="col-lg-4">
+																				<div class="card">
+																					<div class="card-body">
+																						<div
+																							class="d-flex flex-column align-items-center text-center">
+																							<br>
+																							<img src="assets/images/avatars/aku.jpg"
+																								alt="Admin"
+																								class="rounded-circle p-1 bg-primary"
+																								width="110">
+																							<div class="mt-3">
+																								<h5>Regina Aku</h5>
+																								<br>
+																								<p class="mb-1">Senior Business Associate</p>
+																								<br>
+																								<p class="font-size-sm">
+																									Infantry road,<br>33 Motorway,<br> London Region, UK</p>
+																								<!-- <button
+																									class="btn btn-light">Follow</button> -->
+																								<button
+																									class="btn btn-light">Message</button>
+																							</div>
+																						</div>
+
+																					</div>
+																				</div>
+																			</div>
+																			<div class="col-lg-8">
+																				<div class="card">
+																					<div class="card-body">
+																						<div class="row mb-3">
+																							<div class="col-sm-3">
+																								<h6 class="mb-0">Full
+																									Name</h6>
+																							</div>
+																							<div class="col-sm-9">
+																								<input type="text"
+																									class="form-control"
+																									value="REGINA AKU" />
+																							</div>
+																						</div>
+																						<div class="row mb-3">
+																							<div class="col-sm-3">
+																								<h6 class="mb-0">Email
+																								</h6>
+																							</div>
+																							<div class="col-sm-9">
+																								<input type="text"
+																									class="form-control"
+																									value="aku@uk.com" />
+																							</div>
+																						</div>
+																						<div class="row mb-3">
+																							<div class="col-sm-3">
+																								<h6 class="mb-0">Address
+																								</h6>
+																							</div>
+																							<div class="col-sm-9">
+																								<input type="text"
+																									class="form-control"
+																									value="London" />
+																							</div>
+																						</div>
+																						<div class="row mb-3">
+																							<div class="col-sm-3">
+																								<h6 class="mb-0">Contact
+																								</h6>
+																							</div>
+																							<div class="col-sm-9">
+																								<input type="text"
+																									class="form-control"
+																									value="+44 222 4432 111 " />
+																							</div>
+																						</div>
+																						<div class="row mb-3">
+																							<div class="col-sm-3">
+																								<h6 class="mb-0">Bank Name
+																								</h6>
+																							</div>
+																							<div class="col-sm-9">
+																								<input type="text"
+																									class="form-control"
+																									value="DB UK Bank Limited" />
+																							</div>
+																						</div>
+																						<div class="row mb-3">
+																							<div class="col-sm-3">
+																								<h6 class="mb-0">Account Number
+																								</h6>
+																							</div>
+																							<div class="col-sm-9">
+																								<input type="text"
+																									class="form-control"
+																									value="1223345123453" />
+																							</div>
+																						</div>
+																						<div class="row mb-3">
+																							<div class="col-sm-3">
+																								<h6 class="mb-0">Contry
+																								</h6>
+																							</div>
+																							<div class="col-sm-9">
+																								<input type="text"
+																									class="form-control"
+																									value="United Kingdom" />
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="modal-footer">
+																			<button type="button" class="btn btn-light"
+																				data-bs-dismiss="modal">Close</button>
+																			
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>											
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end wrapper-->
+	<!--start switcher-->
+	<div class="switcher-wrapper">
+		<div class="switcher-btn"> <i class='bx bx-cog bx-spin'></i>
+		</div>
+		<div class="switcher-body">
+			<div class="d-flex align-items-center">
+				<h5 class="mb-0 text-uppercase">Theme Customizer</h5>
+				<button type="button" class="btn-close ms-auto close-switcher" aria-label="Close"></button>
+			</div>
+			<hr />
+			<p class="mb-0">Gaussian Texture</p>
+			<hr>
+			<ul class="switcher">
+				<li id="theme1"></li>
+				<li id="theme2"></li>
+				<li id="theme3"></li>
+				<li id="theme4"></li>
+				<li id="theme5"></li>
+				<li id="theme6"></li>
+			</ul>
+			<hr>
+			<p class="mb-0">Gradient Background</p>
+			<hr>
+			<ul class="switcher">
+				<li id="theme7"></li>
+				<li id="theme8"></li>
+				<li id="theme9"></li>
+				<li id="theme10"></li>
+				<li id="theme11"></li>
+				<li id="theme12"></li>
+				<li id="theme13"></li>
+				<li id="theme14"></li>
+				<li id="theme15"></li>
+			</ul>
+		</div>
+	</div>
+	<!--end switcher-->
+	<!-- Bootstrap JS -->
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+	<!--plugins-->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+	<script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+	<script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+	<script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+	<script src="assets/plugins/fancy-file-uploader/jquery.ui.widget.js"></script>
+	<script src="assets/plugins/fancy-file-uploader/jquery.fileupload.js"></script>
+	<script src="assets/plugins/fancy-file-uploader/jquery.iframe-transport.js"></script>
+	<script src="assets/plugins/fancy-file-uploader/jquery.fancy-fileupload.js"></script>
+	<script src="assets/plugins/Drag-And-Drop/dist/imageuploadify.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			$("#show_hide_password a").on('click', function (event) {
+				event.preventDefault();
+				if ($('#show_hide_password input').attr("type") == "text") {
+					$('#show_hide_password input').attr('type', 'password');
+					$('#show_hide_password i').addClass("bx-hide");
+					$('#show_hide_password i').removeClass("bx-show");
+				} else if ($('#show_hide_password input').attr("type") == "password") {
+					$('#show_hide_password input').attr('type', 'text');
+					$('#show_hide_password i').removeClass("bx-hide");
+					$('#show_hide_password i').addClass("bx-show");
+				}
+			});
+		});
+	</script>
+
+	<script>
+		$(".switcher-btn").on("click", function () {
+			$(".switcher-wrapper").toggleClass("switcher-toggled")
+		}), $(".close-switcher").on("click", function () {
+			$(".switcher-wrapper").removeClass("switcher-toggled")
+		}),
+
+
+			$('#theme1').click(theme1);
+		$('#theme2').click(theme2);
+		$('#theme3').click(theme3);
+		$('#theme4').click(theme4);
+		$('#theme5').click(theme5);
+		$('#theme6').click(theme6);
+		$('#theme7').click(theme7);
+		$('#theme8').click(theme8);
+		$('#theme9').click(theme9);
+		$('#theme10').click(theme10);
+		$('#theme11').click(theme11);
+		$('#theme12').click(theme12);
+		$('#theme13').click(theme13);
+		$('#theme14').click(theme14);
+		$('#theme15').click(theme15);
+
+
+		function theme1() {
+			$('body').attr('class', 'bg-theme bg-theme1');
+		}
+
+		function theme2() {
+			$('body').attr('class', 'bg-theme bg-theme2');
+		}
+
+		function theme3() {
+			$('body').attr('class', 'bg-theme bg-theme3');
+		}
+
+		function theme4() {
+			$('body').attr('class', 'bg-theme bg-theme4');
+		}
+
+		function theme5() {
+			$('body').attr('class', 'bg-theme bg-theme5');
+		}
+
+		function theme6() {
+			$('body').attr('class', 'bg-theme bg-theme6');
+		}
+
+		function theme7() {
+			$('body').attr('class', 'bg-theme bg-theme7');
+		}
+
+		function theme8() {
+			$('body').attr('class', 'bg-theme bg-theme8');
+		}
+
+		function theme9() {
+			$('body').attr('class', 'bg-theme bg-theme9');
+		}
+
+		function theme10() {
+			$('body').attr('class', 'bg-theme bg-theme10');
+		}
+
+		function theme11() {
+			$('body').attr('class', 'bg-theme bg-theme11');
+		}
+
+		function theme12() {
+			$('body').attr('class', 'bg-theme bg-theme12');
+		}
+
+		function theme13() {
+			$('body').attr('class', 'bg-theme bg-theme13');
+		}
+
+		function theme14() {
+			$('body').attr('class', 'bg-theme bg-theme14');
+		}
+
+		function theme15() {
+			$('body').attr('class', 'bg-theme bg-theme15');
+		}
+	</script>
+	<script>
+
+		$(document).ready(function () {
+			$('#example').DataTable()
+		});
+
+	</script>
+
+
+	<script>
+		$(document).ready(function () {
+			var table = $('#example2').DataTable({
+				lengthChange: false,
+				buttons: ['copy', 'excel', 'pdf', 'print']
+			});
+
+			table.buttons().container()
+				.appendTo('#example2_wrapper .col-md-6:eq(0)');
+		});
+	</script>
+
+
+	<!--app JS-->
+	<script src="assets/js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--favicon-->
+	<link rel="icon" href="assets/images/logo-tma.png" type="image/png" />
+	<!--plugins-->
+	<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+	<link href="assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+	<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+	<link href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.min.css">
+	<link href="assets/plugins/datetimepicker/css/classic.css" rel="stylesheet" />
+	<link href="assets/plugins/datetimepicker/css/classic.date.css" rel="stylesheet" />
+
+	<!-- loader-->
+	<link href="assets/css/pace.min.css" rel="stylesheet" />
+	<script src="assets/js/pace.min.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-extended.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link href="assets/css/app.css" rel="stylesheet">
+	<link href="assets/css/icons.css" rel="stylesheet">
+
+	<title>GFCA - Reports</title>
+</head>
+
+<body class="bg-theme bg-theme11">
+	<!--wrapper-->
+	<div class="wrapper">
+		<!--sidebar wrapper -->
+		<div class="sidebar-wrapper" data-simplebar="true">
+			<div class="sidebar-header">
+				<div>
+					<img src="assets/images/logo-tma.png" class="logo-icon" alt="logo icon">
+				</div>
+				<div>
+					<h4 class="logo-text">GFCA</h4>
+				</div>
+				<div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
+				</div>
+			</div>
+			<!--navigation-->
+			<ul class="metismenu" id="menu">
+				<li>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class='bx bx-home-circle'></i>
+						</div>
+						<div class="menu-title">Dashboard</div>
+					</a>
+					<ul>
+						<li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>Total IDFs</a>
+						</li>
+						<!-- <li> <a href="fob.html"><i class="bx bx-right-arrow-alt"></i>Total FOB</a>
+						</li> -->
+						<!-- <li> <a href="cif.html"><i class="bx bx-right-arrow-alt"></i>Total CIF</a>
+						</li>
+						<li> <a href="tax-payable.html"><i class="bx bx-right-arrow-alt"></i>Total Tax
+								Payable</a>
+						</li>
+						<li> <a href="tax-paid.html"><i class="bx bx-right-arrow-alt"></i>Total Tax Paid</a>
+						</li>
+						<li> <a href="exemption.html"><i class="bx bx-right-arrow-alt"></i>Total Exemptions</a>
+						</li> -->
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class="bx bx-category"></i>
+						</div>
+						<div class="menu-title">Set up</div>
+					</a>
+					<ul>
+						<li> <a href="form-file-upload.html"><i class="bx bx-right-arrow-alt"></i>Import Data</a>
+						</li>
+						<li> <a href="create-user.html"><i class="bx bx-right-arrow-alt"></i>Create User</a>
+						</li>
+						<li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>Renew User Account</a>
+						</li>
+					</ul>
+				</li>
+				<li class="menu-label">Elements Management</li>
+				<li>
+					<a class="has-arrow" href="javascript:;">
+						<div class="parent-icon"><i class="bx bx-folder"></i>
+						</div>
+						<div class="menu-title">Reports</div>
+					</a>
+					<ul>
+						<li>
+							<a class="has-arrow" href="javascript:;">
+								<div class="parent-icon"><i class="bx bx-right-arrow-alt"></i>
+								</div>
+								<div class="menu-title">Statistical Reports</div>
+							</a>
+							<ul>
+								<li> <a href="report.html" target="_blank"><i class="bx bx-right-arrow-alt"></i>Banks
+										IDFs</a>
+								</li>
+								<li> <a href="report1.html" target="_blank"><i class="bx bx-right-arrow-alt"></i>BDC
+										IDFs</a>
+								</li>
+								<li> <a href="report2.html" target="_blank"><i class="bx bx-right-arrow-alt"></i>Other
+										IDFs</a>
+								</li>
+								<li> <a href="report11.html" target="_blank"><i
+											class="bx bx-right-arrow-alt"></i>Countries Track</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a class="has-arrow" href="javascript:;">
+								<div class="parent-icon"><i class="bx bx-right-arrow-alt"></i>
+								</div>
+								<div class="menu-title">AI Query</div>
+							</a>
+							<ul>
+								<li> <a href="report3.html" title="Undeclared IDF" target="_blank"><i
+											class="bx bx-right-arrow-alt"></i>Undeclared IDF</a>
+								</li>
+								<li> <a href="report10.html" target="_blank"><i
+											class="bx bx-right-arrow-alt"></i>Expired Bonded Warehouse</a>
+								</li>
+								<li> <a href="report4.html" target="_blank"><i
+											class="bx bx-right-arrow-alt"></i>Understated IDF</a>
+								</li>
+								<li> <a href="report5.html" target="_blank"><i class="bx bx-right-arrow-alt"></i>BOE
+										without Transfers</a>
+								</li>
+								<li> <a href="report6.html" target="_blank"><i
+											class="bx bx-right-arrow-alt"></i>Non-Declarant</a>
+								</li>
+								<li> <a href="report7.html" target="_blank"><i class="bx bx-right-arrow-alt"></i>BDC IDF
+										Vs Product CIF Declared</a>
+								</li>
+								<li> <a href="report12.html" target="_blank"><i
+											class="bx bx-right-arrow-alt"></i>Non-Repatriation</a>
+								</li>
+								<!-- <li> <a href="report8.html" target="_blank"><i
+									class="bx bx-right-arrow-alt"></i>Unpaid-For Gated-Out Container</a>
+								</li>
+								<li> <a href="report9.html" target="_blank"><i
+											class="bx bx-right-arrow-alt"></i>Undeclared Cargo Reports</a>
+								</li> -->
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<!-- <li>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class='bx bx-layer-plus'></i>
+						</div>
+						<div class="menu-title">Airport Module</div>
+					</a>
+					<ul>
+						<li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>Courier Services</a>
+						</li>
+						<li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>Cargos</a>
+						</li>
+					</ul>
+				</li> -->
+				<li>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class='bx bx-message-square-edit'></i>
+						</div>
+						<div class="menu-title">Settings</div>
+					</a>
+					<ul>
+						<li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>IDF Perfection
+								Maturity Period</a>
+						</li>
+						<li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>Update HS
+								Code</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="index.html">
+						<div class="parent-icon"><i class='bx bx-donate-blood'></i>
+						</div>
+						<div class="menu-title">Banks</div>
+					</a>
+				</li>
+				<li>
+					<a href="importer_create.html">
+						<div class="parent-icon"><i class='bx bx-user-circle'></i>
+						</div>
+						<div class="menu-title">Importers</div>
+					</a>
+				</li>
+				<li>
+					<a href="exporter_create.html">
+						<div class="parent-icon"><i class='bx bx-user-circle'></i>
+						</div>
+						<div class="menu-title">Exporters</div>
+					</a>
+				</li>
+				<li>
+					<a href="supplier_create.html">
+						<div class="parent-icon"><i class='bx bx-user-circle'></i>
+						</div>
+						<div class="menu-title">Suppliers</div>
+					</a>
+				</li>
+			</ul>
+			<!--end navigation-->
+		</div>
+		<!--end sidebar wrapper -->
+		<!--start header -->
+		<header>
+			<div class="topbar d-flex align-items-center">
+				<nav class="navbar navbar-expand">
+					<div class="mobile-toggle-menu"><i class='bx bx-menu'></i>
+					</div>
+					<div class="search-bar flex-grow-1">
+						<div class="position-relative search-bar-box">
+							<input type="text" class="form-control search-control" placeholder="Type to search...">
+							<span class="position-absolute top-50 search-show translate-middle-y"><i
+									class='bx bx-search'></i></span>
+							<span class="position-absolute top-50 search-close translate-middle-y"><i
+									class='bx bx-x'></i></span>
+						</div>
+					</div>
+					<div class="top-menu ms-auto">
+						<ul class="navbar-nav align-items-center">
+							<li class="nav-item mobile-search-icon">
+								<a class="nav-link" href="#"> <i class='bx bx-search'></i>
+								</a>
+							</li>
+							<li class="nav-item dropdown dropdown-large">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
+									role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span
+										class="alert-count">3</span>
+									<i class='bx bx-bell'></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<a href="javascript:;">
+										<div class="msg-header">
+											<p class="msg-header-title">Notifications</p>
+											<p class="msg-header-clear ms-auto">Marks all as read</p>
+										</div>
+									</a>
+									<div class="header-notifications-list">
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify"><i class="bx bx-group"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Renew Account<span
+															class="msg-time float-end">14 Sec
+															ago</span></h6>
+													<p class="msg-info">Regina account has expired</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify"><i class="bx bx-file"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">24 PDF File<span class="msg-time float-end">19
+															min
+															ago</span></h6>
+													<p class="msg-info">New reports generated</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify"><i class="bx bx-send"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New User Added <span
+															class="msg-time float-end">2 hrs ago</span></h6>
+													<p class="msg-info">Ali created a new user</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:;">
+										<div class="text-center msg-footer">View All Notifications</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="user-box dropdown">
+						<a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#"
+							role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="assets/images/avatars/aku.jpg" class="user-img" alt="user avatar">
+							<div class="user-info ps-3">
+								<p class="user-name mb-0">Regina Aku</p>
+								<p class="designattion mb-0">Super admin</p>
+							</div>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li><a class="dropdown-item" href="javascript:;"><i
+										class="bx bx-user"></i><span>Profile</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i
+										class="bx bx-cog"></i><span>Settings</span></a>
+							</li>
+							<li>
+								<div class="dropdown-divider mb-0"></div>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i
+										class='bx bx-log-out-circle'></i><span>Logout</span></a>
+							</li>
+						</ul>
+					</div>
+					<div class="top-menu ms-auto">
+						<ul class="navbar-nav align-items-center">
+							<li class="nav-item dropdown dropdown-large">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
+									role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									<i class='bx bx-bell'></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<a href="javascript:;">
+										<div class="msg-header">
+										</div>
+									</a>
+									<div class="header-notifications-list">
+
+									</div>
+
+								</div>
+							</li>
+
+							<li class="nav-item dropdown dropdown-large">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
+									role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									<i class='bx bx-comment'></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<div class="header-message-list">
+
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<!--end header -->
+		<!--start page wrapper -->
+		<div class="page-wrapper">
+			<div class="d-flex align-items-center justify-content-center" style="height:50px">
+				<h6>1st Jan 2021 - 17th Dec 2022</h6>
+
+			</div>
+			<div
+				class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 product-grid justify-content-center">
+				
+				<div class="col ">
+					
+					<div class="card ">
+						<div class="text-center">
+							<img src="assets/images/logo/logo8.png" class="card-img-top w-50" alt="...">
+						</div>
+
+						<div class="card-body">
+							<h6 class="card-title cursor-pointer">Bank Of Ghana</h6>
+							<div class="clearfix">
+								<p class="mb-0 float-start"><strong>134</strong> Transfers</p>
+								<p class="mb-0 float-end fw-bold"><span class="text-white">$24,000</span></p>
+							</div>
+							<div class="d-flex align-items-center mt-3 fs-6">
+								<div class="cursor-pointer">
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-light-4'></i>
+								</div>
+								<p class="mb-0 ms-auto">Compliance</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card">
+						<div class="text-center">
+							<img src="assets/images/logo/logo.png" class="card-img-top w-50" alt="...">
+						</div>
+						<div class="card-body">
+							<h6 class="card-title cursor-pointer">National Investment Bank</h6>
+							<div class="clearfix">
+								<p class="mb-0 float-start"><strong>34</strong> Transfers</p>
+								<p class="mb-0 float-end fw-bold"><span class="text-white">$1,000</span></p>
+							</div>
+							<div class="d-flex align-items-center mt-3 fs-6">
+								<div class="cursor-pointer">
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-light-4'></i>
+									<i class='bx bxs-star text-light-4'></i>
+									<i class='bx bxs-star text-light-4'></i>
+								</div>
+								<p class="mb-0 ms-auto">Compliance</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card">
+						<div class="text-center">
+							<img src="assets/images/logo/logo3.png" class="card-img-top w-50" alt="...">
+						</div>
+						<div class="card-body">
+							<h6 class="card-title cursor-pointer">Republic Bank</h6>
+							<div class="clearfix">
+								<p class="mb-0 float-start"><strong>57</strong> Transfers</p>
+								<p class="mb-0 float-end fw-bold"><span class="text-white">$8,000</span></p>
+							</div>
+							<div class="d-flex align-items-center mt-3 fs-6">
+								<div class="cursor-pointer">
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-light-4'></i>
+									<i class='bx bxs-star text-light-4'></i>
+								</div>
+								<p class="mb-0 ms-auto">Compliance</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col ">
+					<div class="card justify-content-center">
+						<div class="text-center">
+							<img src="assets/images/logo/logo4.png" class="card-img-top w-50 " alt="...">
+						</div>
+						<div class="card-body">
+							<h6 class="card-title cursor-pointer">Guaranty Trust Bank</h6>
+							<div class="clearfix">
+								<p class="mb-0 float-start"><strong>63</strong> Transfers</p>
+								<p class="mb-0 float-end fw-bold"><span class="text-white">$5,000</span></p>
+							</div>
+							<div class="d-flex align-items-center mt-3 fs-6">
+								<div class="cursor-pointer">
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-light-4'></i>
+									<i class='bx bxs-star text-light-4'></i>
+								</div>
+								<p class="mb-0 ms-auto">Compliance</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card">
+						<div class="text-center">
+							<img src="assets/images/logo/logo5.png" class="card-img-top w-50" alt="...">
+						</div>
+						<div class="card-body">
+							<h6 class="card-title cursor-pointer">Zenith Bank</h6>
+							<div class="clearfix">
+								<p class="mb-0 float-start"><strong>96</strong> Transfers</p>
+								<p class="mb-0 float-end fw-bold"><span class="text-white">$17,500</span></p>
+							</div>
+							<div class="d-flex align-items-center mt-3 fs-6">
+								<div class="cursor-pointer">
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-light-4'></i>
+									<i class='bx bxs-star text-light-4'></i>
+								</div>
+								<p class="mb-0 ms-auto">Compliance</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card">
+						<img src="assets/images/logo/logo60.png" class="card-img-top" alt="...">
+
+						<div class="card-body">
+							<h6 class="card-title cursor-pointer">EcoBank</h6>
+							<div class="clearfix">
+								<p class="mb-0 float-start"><strong>600</strong> Transfers</p>
+								<p class="mb-0 float-end fw-bold"><span class="text-white">$126,000</span></p>
+							</div>
+							<div class="d-flex align-items-center mt-3 fs-6">
+								<div class="cursor-pointer">
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-white'></i>
+								</div>
+								<p class="mb-0 ms-auto">Compliance</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card">
+						<img src="assets/images/logo/logo70.png" class="card-img-top" alt="...">
+
+						<div class="card-body">
+							<h6 class="card-title cursor-pointer">Agricultural Development Bank</h6>
+							<div class="clearfix">
+								<p class="mb-0 float-start"><strong>45</strong> Transfers</p>
+								<p class="mb-0 float-end fw-bold"><span class="text-white">$1,900</span></p>
+							</div>
+							<div class="d-flex align-items-center mt-3 fs-6">
+								<div class="cursor-pointer">
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-light-4'></i>
+									<i class='bx bxs-star text-light-4'></i>
+									<i class='bx bxs-star text-light-4'></i>
+								</div>
+								<p class="mb-0 ms-auto">Compliance</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card">
+						<img src="assets/images/logo/logo1.png" class="card-img-top" alt="...">
+
+						<div class="card-body">
+							<h6 class="card-title cursor-pointer">Ghana Commercial Bank</h6>
+							<div class="clearfix">
+								<p class="mb-0 float-start"><strong>113</strong> Transfers</p>
+								<p class="mb-0 float-end fw-bold"><span class="text-white">$13,000</span></p>
+							</div>
+							<div class="d-flex align-items-center mt-3 fs-6">
+								<div class="cursor-pointer">
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-light-4'></i>
+									<i class='bx bxs-star text-light-4'></i>
+								</div>
+								<p class="mb-0 ms-auto">Compliance</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card">
+						<img src="assets/images/logo/logo20.png" class="card-img-top" alt="...">
+
+						<div class="card-body">
+							<h6 class="card-title cursor-pointer">ABSA</h6>
+							<div class="clearfix">
+								<p class="mb-0 float-start"><strong>143</strong> Transfers</p>
+								<p class="mb-0 float-end fw-bold"><span class="text-white">$27,190</span></p>
+							</div>
+							<div class="d-flex align-items-center mt-3 fs-6">
+								<div class="cursor-pointer">
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-white'></i>
+									<i class='bx bxs-star text-light-4'></i>
+									<i class='bx bxs-star text-light-4'></i>
+								</div>
+								<p class="mb-0 ms-auto">Compliance</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<h6 class="mb-0 text-uppercase">Bank IDFs</h6>
+			<hr />
+			<div class="card">
+				<div class="card-body">
+					<div class="table-responsive">
+						
+						<table id="example" class="table table-striped table-bordered">
+							<thead>
+								<tr>
+									<th>NAME OF BANK</th>
+									<th>SENDER</th>
+									<th>TRANSFER DATE</th>
+									<th>PURPOSE</th>
+									<th>NUMBER OF IDFs</th>
+									<th>TRANSFERED AMOUNT</th>
+									<th>DESIGNATED COUNTRY</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Stanbic Bank Ghana Ltd</td>
+									<td>KIAN JOO CAN FACTORY BERHAD</td>
+									<td>01/01/2021</td>
+									<td>Trade Related Services</td>
+									<td>20</td>
+									<td>914,114,178.4</td>
+									<td>INDIA</td>
+								</tr>
+								<tr>
+									<td>FIdelity Bank Ghana Ltd</td>
+									<td>EL-SAFA FOR PRINTING & PACKAGING</td>
+									<td>01/01/2021</td>
+									<td>Trade Related Services</td>
+									<td>10</td>
+									<td>541,245,387.8</td>
+									<td>MALASYA</td>
+								</tr>
+								<tr>
+									<td>GCB Bank Ltd</td>
+									<td>EL-SAFA FOR PRINTING & PACKAGING</td>
+									<td>01/01/2021</td>
+									<td>Trade Related Services</td>
+									<td>15</td>
+									<td>448,942,577.2</td>
+									<td>ITALY</td>
+								</tr>
+								<tr>
+									<td>Agricultural Development Bank</td>
+									<td>HUTAMAKI PPL LTD</td>
+									<td>01/01/2021</td>
+									<td>Trade Related Services</td>
+									<td>14</td>
+									<td>384,186,064</td>
+									<td>SPAIN</td>
+								</tr>
+								<tr>
+									<td>FIdelity Bank Ghana Ltd</td>
+									<td>EL-SAFA FOR PRINTING & PACKAGING</td>
+									<td>01/01/2021</td>
+									<td>Trade Related Services</td>
+									<td>10</td>
+									<td>541,245,387.8</td>
+									<td>MALASYA</td>
+								</tr>
+								<tr>
+									<td>GCB Bank Ltd</td>
+									<td>EL-SAFA FOR PRINTING & PACKAGING</td>
+									<td>01/01/2021</td>
+									<td>Trade Related Services</td>
+									<td>15</td>
+									<td>448,942,577.2</td>
+									<td>JAPAN</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+		<!--end page wrapper -->
+		<!--start overlay-->
+		<div class="overlay toggle-icon"></div>
+		<!--end overlay-->
+		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i
+				class='bx bxs-up-arrow-alt'></i></a>
+		<!--End Back To Top Button-->
+		<!-- <footer class="page-footer">
+			<p class="mb-0">Copyright © 2021. All right reserved.</p>
+		</footer> -->
+	</div>
+	<!--end wrapper-->
+	<!--start switcher-->
+	<div class="switcher-wrapper">
+		<div class="switcher-btn"> <i class='bx bx-cog bx-spin'></i>
+		</div>
+		<div class="switcher-body">
+			<div class="d-flex align-items-center">
+				<h5 class="mb-0 text-uppercase">Theme Customizer</h5>
+				<button type="button" class="btn-close ms-auto close-switcher" aria-label="Close"></button>
+			</div>
+			<hr />
+			<p class="mb-0">Gaussian Texture</p>
+			<hr>
+
+			<ul class="switcher">
+				<li id="theme1"></li>
+				<li id="theme2"></li>
+				<li id="theme3"></li>
+				<li id="theme4"></li>
+				<li id="theme5"></li>
+				<li id="theme6"></li>
+			</ul>
+			<hr>
+			<p class="mb-0">Gradient Background</p>
+			<hr>
+
+			<ul class="switcher">
+				<li id="theme7"></li>
+				<li id="theme8"></li>
+				<li id="theme9"></li>
+				<li id="theme10"></li>
+				<li id="theme11"></li>
+				<li id="theme12"></li>
+				<li id="theme13"></li>
+				<li id="theme14"></li>
+				<li id="theme15"></li>
+			</ul>
+		</div>
+	</div>
+	<!--end switcher-->
+
+	<!-- Bootstrap JS -->
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<!--plugins-->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+	<script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+	<script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+	<script src="assets/js/dashboard-eCommerce.js"></script>
+	<script src="assets/plugins/chartjs/chart.min.js"></script>
+	<script src="assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
+	<script src="assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
+	<script src="assets/plugins/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+	<script src="assets/plugins/peity/jquery.peity.min.js"></script>
+	<script src="assets/plugins/sparkline-charts/jquery.sparkline.min.js"></script>
+	<script src="assets/plugins/jquery-knob/excanvas.js"></script>
+	<script src="assets/plugins/jquery-knob/jquery.knob.js"></script>
+	<script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+	<script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+	<script src="assets/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
+	<script src="assets/js/dashboard-digital-marketing.js"></script>
+	<script src="assets/plugins/datetimepicker/js/picker.js"></script>
+	<script src="assets/plugins/datetimepicker/js/picker.date.js"></script>
+	<script>
+		$('.datepicker').pickadate({
+			selectMonths: true,
+	        selectYears: true
+		}),
+		$('.timepicker').pickatime()
+	</script>
+	<script>
+		$(function () {
+			$('#date-time').bootstrapMaterialDatePicker({
+				format: 'YYYY-MM-DD HH:mm'
+			});
+			$('#date').bootstrapMaterialDatePicker({
+				time: false
+			});
+			$('#time').bootstrapMaterialDatePicker({
+				date: false,
+				format: 'HH:mm'
+			});
+		});
+	</script>
+	<script>
+		$(function () {
+			$(".knob").knob();
+		});
+	</script>
+	<script src="assets/js/index.js"></script>
+	<script>
+		$(document).ready(function () {
+			var table = $('#example').DataTable({
+				lengthChange: false,
+				buttons: ['copy', 'excel', 'pdf', 'print']
+			});
+
+			table.buttons().container()
+				.appendTo('#example_wrapper .col-md-6:eq(0)');
+		});
+	</script>
+
+	<!--app JS-->
+	<script src="assets/js/app.js"></script>
+	<script>
+		new PerfectScrollbar('.product-list');
+		new PerfectScrollbar('.customers-list');
+	</script>
+
+</body>
+
+</html>

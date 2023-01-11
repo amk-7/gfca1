@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--favicon-->
+	<link rel="icon" href="assets/images/logo-tma.png" type="image/png" />
+	<!-- loader-->
+	<link href="assets/css/pace.min.css" rel="stylesheet" />
+	<script src="assets/js/pace.min.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-extended.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link href="assets/css/app.css" rel="stylesheet">
+	<link href="assets/css/icons.css" rel="stylesheet">
+	<title>Trade Mis-Invoicing Analytics - Log in</title>
+</head>
+
+<body class="bg-theme bg-theme1" style="background-image: url('assets/images/back.png'); height: 100vh; backdrop-filter: brightness(0.3);" >
+	<!--wrapper-->
+	<div class="wrapper" >
+		<div class="section-authentication-signin d-flex align-items-center my-5 my-lg-0" >
+			<div class="row container-fluid" >
+				<div class="col">
+					<br>
+					<br>
+					<div>
+						
+						<h1 class="text-center" style="color: rgb(238, 162, 10);">
+							<img src="assets/images/logo-tma.png" style="height: 20vh;" alt="logo icon"><br>Ghana Financial and Cargo Analytics</h1>
+					<!-- <h6 class="text-center">Ghana Financial and Cargo Flow Integrity Analytics</h6> -->
+					</div>
+					
+					<br>
+					<br>
+				</div>
+				<div class="col-3 col-lg-4 col-xl-5" >
+					<div class>
+						<div class="card">
+							<div class="card-body bg-theme1">
+								<div class="border p-4 rounded">
+									<div class="form-body">
+										<form class="row g-3">
+											<div class="col-12">
+												<label for="inputEmailAddress" class="form-label">Email Address</label>
+												<input type="email" class="form-control" id="inputEmailAddress"
+													placeholder="Email Address">
+											</div>
+											<div class="col-12">
+												<label for="inputChoosePassword" class="form-label">Enter
+													Password</label>
+												<div class="input-group" id="show_hide_password">
+													<input type="password" class="form-control border-end-0"
+														id="inputChoosePassword" value="12345678"
+														placeholder="Enter Password"> <a href="javascript:;"
+														class="input-group-text bg-transparent"><i
+															class='bx bx-hide'></i></a>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-check form-switch">
+													<input class="form-check-input" type="checkbox"
+														id="flexSwitchCheckChecked" checked>
+													<label class="form-check-label"
+														for="flexSwitchCheckChecked">Remember Me</label>
+												</div>
+											</div>
+											<div class="col-md-6 text-end"> <a
+													href="authentication-forgot-password.html">Forgot Password ?</a>
+											</div>
+											<div class="col-12 text-center">
+												
+													<button type="submit" id="submit" class="btn btn-warning" href='./index.html'><i
+															class="bx bxs-lock-open"></i>Sign in</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--end row-->
+			</div>
+		</div>
+	</div>
+	<!--plugins-->
+	<script src="assets/js/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			$("#show_hide_password a").on('click', function (event) {
+				event.preventDefault();
+				if ($('#show_hide_password input').attr("type") == "text") {
+					$('#show_hide_password input').attr('type', 'password');
+					$('#show_hide_password i').addClass("bx-hide");
+					$('#show_hide_password i').removeClass("bx-show");
+				} else if ($('#show_hide_password input').attr("type") == "password") {
+					$('#show_hide_password input').attr('type', 'text');
+					$('#show_hide_password i').removeClass("bx-hide");
+					$('#show_hide_password i').addClass("bx-show");
+				}
+			});
+			// $("#submit").on('click', function (event) {
+			// 	event.preventDefault();
+			// 	alert('1')
+			// 	Toast.fire({
+			// 		'title': 'Engagement Created!',
+			// 		'icon': 'success'
+			// 	}).then(() => {
+			// 		location = './index.html';
+			// 	});
+			// });
+		});
+	</script>
+	<script type="text/javascript">
+		$(() => {
+			let $o = {
+				'submit': $('#submit'),
+			};
+
+			$o.submit.click(function (e) {
+				e.preventDefault();
+					location = 'index.html';
+			});		
+		});
+	</script>
+	<!-- <script>
+		$(document).ready(function () {
+			$("#submit").on('click', function (event) {
+					event.preventDefault();
+					location = 'index.html';
+				});
+			
+		});
+	</script> -->
+	
+</body>
+
+</html>
